@@ -21,4 +21,8 @@ export default class Product {
         const sameDay = moment().isSame( moment(this.publishedDate), 'day' );
         return sameDay;
     }
+
+    isNew() {
+        return this.productType === PRODUCT_TYPE.NEW;
+    }
 }
