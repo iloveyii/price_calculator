@@ -79,7 +79,7 @@ Below is the directory structure of the source code:
    |---Robot.js
    |---idex.js
    |-test
-   |--compass.test.js
+   |--settings.test.js
    |--robot.test.js
    |-package.json
    |-webpack.config.js
