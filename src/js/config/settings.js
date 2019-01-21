@@ -9,8 +9,8 @@ export const PRODUCT_TYPE = {
 };
 
 export const PRODUCT_TYPE_PRICES = {
-    NEW : 25,
-    OLD: 35
+    [PRODUCT_TYPE.NEW] : 25,
+    [PRODUCT_TYPE.OLD]: 35
 };
 
 export const REBATE = {
