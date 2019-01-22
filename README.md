@@ -1,4 +1,4 @@
-Project Robot
+Calculate Price
 =======
 This a small application to calculate price developed in Node, ES6, JS. 
 
@@ -18,7 +18,7 @@ This application calculates price based on different rules and values. The calcu
 * Price
 * Published date
 
-####Formula
+### Formula
 
 The formula for the price calculation is:
 
