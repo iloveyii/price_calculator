@@ -11,7 +11,7 @@ export default class User {
     }
 
     isCompanyUser() {
-        return this.userType === USER_TYPE.COMPANY_USER;
+        return Number(this.userType) === USER_TYPE.COMPANY_USER;
     }
 
 }
