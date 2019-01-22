@@ -40,25 +40,26 @@ The additional product type prices are:
 ## Setup and first run
 
   * You need to have node, npm, git pre installed. This app has been developed and tested on Ubuntu 14.04, 17.04, 17.10. 
-  * Clone the repository `git clone https://bitbucket.org/iloveyii/robot-node-es6`.
+  * Clone the repository `git clone git@github.com:iloveyii/price_calculator.git`.
   * Run (inside root directory) npm install `npm install`.
   * To run the tests `npm run test`.
-  * To run the Robot `npm run robot`.
-  * Once transpiled with the above command, it can be run directly like `node public/bundle.js`.
+  * To build the app `npm run build`.
+  * To run the app dev server `npm start`.
+  * Open browser and open `localhost:8080`.
   
 ### Example Input
 ```
-
-  2
-  1 1
-  N 3
-  W 4
+  User Type: Company User
+  Product Type: Old
+  Published Date: today
+  Price: 20
   
 ```
 ### Example output
 ```
 
-  => Cleaned: 8
+  Calculated Price: 50
+  Rebate: 5
   
 ```
   
@@ -69,27 +70,30 @@ Below is the directory structure of the source code:
 ```
 
    |-public
-   |--src
    |---bundle.js
    |-src
    |--js
-   |---Command.js
-   |---Compass.js
-   |---Coordinates.js
-   |---Robot.js
-   |---idex.js
+   |---config
+   |---CalculatePrice.js
+   |---index.js
+   |---Product.js
+   |---User.js
    |-test
+   |--calculate.test.js
+   |--product.test.js
    |--settings.test.js
-   |--robot.test.js
+   |--user.test.js
+   |-web
+   |-.babelrc
    |-package.json
    |-webpack.config.js
-   |-index.html
+   |-README.md
    
 ```
 
 ## Requirements
    * The application has been tested with the following.
-   * Ubuntu 14.04, 17.04, 17.10
+   * Ubuntu 18.10
    * Node v9.11.2
    * Npm 5.6.0
    
