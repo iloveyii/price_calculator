@@ -9,7 +9,7 @@ import moment from 'moment';
  * @param date publishedDate - the publish date of the product
  * @constructor
  */
-export default class Calculate {
+export default class CalculatePrice {
     constructor(product, user) {
         this.product = product;
         this.user = user;

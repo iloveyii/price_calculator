@@ -6,10 +6,9 @@
   "scripts": {
     "test": "mocha --compilers js:babel-core/register",
     "watch": "webpack --watch",
-    "start": "webpack --watch & webpack-dev-server --open-page 'index.html'",
-    "build": "webpack --config webpack.config.js",
-    "node": "node public/bundle.js",
-    "robot": "npm run build && npm run node"
+    "start": "webpack --watch & webpack-dev-server --content-base web/ --hot --progress --colors",
+    "build": "webpack --config webpack.config.js && cp public/bundle.js web/js/",
+    "node": "node public/bundle.js"
   },
   "keywords": [],
   "author": "",
