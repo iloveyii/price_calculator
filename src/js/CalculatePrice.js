@@ -1,10 +1,9 @@
 import {PRODUCT_TYPE_PRICES, REBATE, USER_TYPE} from "./config/settings";
 
 /**
- * This is a Product object which contains three properties
- * @param number productType - new 1 , old - 2
- * @param number price - the price of the product
- * @param date publishedDate - the publish date of the product
+ * This is a Product object which contains two properties
+ * @param Object product - Product object
+ * @param Object user - User object
  * @constructor
  */
 export default class CalculatePrice {
