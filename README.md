@@ -37,6 +37,14 @@ The additional product type prices are:
 * If you are a _company user_ you will receive a rebate of 5 SEK.
 
 
+### What has been done
+  * I used node, ES 6 for this task as it is easy to develop and test
+  * I segregated the project logic into three classes, Product, User, and CalculatePrice. It is easy to maintain, read and test.
+  * I used config/settings.js for settings the constants to make it easy to maintain these values later.
+  * I used mocha, chai tests to make it robust.
+  * I developed a simple web/index interface using JS / JQuery to test / try the code with different values.
+
+
 ## Setup and first run
 
   * You need to have node, npm, git pre installed. This app has been developed and tested on Ubuntu 14.04, 17.04, 17.10. 
