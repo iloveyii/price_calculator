@@ -1,4 +1,4 @@
-import { USER_TYPE} from "./config/settings";
+import {USER_TYPE} from "./config/settings";
 
 /**
  * This is a User object which contains one property

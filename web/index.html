@@ -1,118 +1,118 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="Hazrat Ali" content="A PHP , VUE application">
-        <link rel="icon" href="/img/favicon.png">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="Hazrat Ali" content="A PHP , VUE application">
+    <link rel="icon" href="/img/favicon.png">
 
-        <title>Price Calculator </title>
+    <title>Price Calculator </title>
 
-         <!-- Bootstrap CSS CDN -->
-        <link rel="stylesheet" href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css">
-        <!-- Our Custom CSS -->
-        <link rel="stylesheet" href="./css/style5.css">
-        <link rel="stylesheet" href="./css/bootstrap-datepicker.min.css">
-        <!-- JQuery -->
-        <script src="./js/jquery.js"></script>
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="./css/style5.css">
+    <link rel="stylesheet" href="./css/bootstrap-datepicker.min.css">
+    <!-- JQuery -->
+    <script src="./js/jquery.js"></script>
 
-        <!-- Vue -->
-        <script src="https://unpkg.com/vue"></script>
-        <script src="https://cdn.jsdelivr.net/npm/vue-resource@1.5.1"></script>
-    </head>
-    <body style="height: 100vh">
+    <!-- Vue -->
+    <script src="https://unpkg.com/vue"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue-resource@1.5.1"></script>
+</head>
+<body style="height: 100vh">
 
-    <div class="container-fluid" id="vue-app" style="height: 100vh">
+<div class="container-fluid" id="vue-app" style="height: 100vh">
 
-        <div class="row" style="height: 100vh">
-            <div class="col-sm-6 offset-3" style="height: 100vh">
-                <div class="row">
-                    <div class="col-sm-121">
-                        <form>
-                            <div class="form-group">
-                                <label for="userType">User Type</label>
-                                <select class="form-control" id="userType">
-                                    <option value="1">Company User</option>
-                                    <option value="2">Normal User</option>
-                                </select>
-                                <small id="userTypeHelp" class="form-text text-muted">Select user type.</small>
+    <div class="row" style="height: 100vh">
+        <div class="col-sm-6 offset-3" style="height: 100vh">
+            <div class="row">
+                <div class="col-sm-121">
+                    <form>
+                        <div class="form-group">
+                            <label for="userType">User Type</label>
+                            <select class="form-control" id="userType">
+                                <option value="1">Company User</option>
+                                <option value="2">Normal User</option>
+                            </select>
+                            <small id="userTypeHelp" class="form-text text-muted">Select user type.</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="productType">Product Type</label>
+                            <select class="form-control" id="productType">
+                                <option value="1">New</option>
+                                <option value="2">Old</option>
+                            </select>
+                            <small id="productTypeHelp" class="form-text text-muted">Select product type.</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="publishedDate">Published Date</label>
+                            <input type="text" id="publishedDate" class="form-control"/>
+                            <small id="publishedDateHelp" class="form-text text-muted">Select published date.</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="price">Price</label>
+                            <input type="text" id="price" class="form-control"/>
+                            <small id="priceHelp" class="form-text text-muted">Select published date.</small>
+                        </div>
+
+                        <div class="form-group">
+                            <div>
+                                <label for="price">Calculated Price:</label> <span id="calculatePrice"></span>
                             </div>
 
-                            <div class="form-group">
-                                <label for="productType">Product Type</label>
-                                <select class="form-control" id="productType">
-                                    <option value="1">New</option>
-                                    <option value="2">Old</option>
-                                </select>
-                                <small id="productTypeHelp" class="form-text text-muted">Select product type.</small>
+                            <div>
+                                <label for="price">Rebate:</label> <span id="rebate"></span>
                             </div>
+                        </div>
 
-                            <div class="form-group">
-                                <label for="publishedDate">Published Date</label>
-                                <input type="text" id="publishedDate" class="form-control" />
-                                <small id="publishedDateHelp" class="form-text text-muted">Select published date.</small>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="price">Price</label>
-                                <input type="text" id="price" class="form-control" />
-                                <small id="priceHelp" class="form-text text-muted">Select published date.</small>
-                            </div>
-
-                            <div class="form-group">
-                                <div>
-                                    <label for="price">Calculated Price:</label> <span id="calculatePrice"></span>
-                                </div>
-
-                                <div>
-                                    <label for="price">Rebate:</label> <span id="rebate"></span>
-                                </div>
-                            </div>
-
-                            <button type="button" onclick="calculatePrice()" class="btn btn-primary">Run</button>
-                        </form>
-                    </div>
+                        <button type="button" onclick="calculatePrice()" class="btn btn-primary">Run</button>
+                    </form>
                 </div>
-
             </div>
 
         </div>
+
     </div>
+</div>
 
 
-    <!-- jQuery CDN -->
-    <!-- Bootstrap Js CDN -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <!-- HLS Video Library-->
-    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
-    <!-- Vue code -->
-    <script src="./js/bundle.js"></script>
-    <script src="./js/bootstrap-datepicker.min.js"></script>
+<!-- jQuery CDN -->
+<!-- Bootstrap Js CDN -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!-- HLS Video Library-->
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+<!-- Vue code -->
+<script src="./js/bundle.js"></script>
+<script src="./js/bootstrap-datepicker.min.js"></script>
 
-    <script>
-        function calculatePrice() {
-            const price = $('#price').val();
-            const userType = $('#userType').val();
-            const productType = $('#productType').val();
-            const publishedDate = $('#publishedDate').val();
-            console.log('Inside calculate',  price, userType, productType, publishedDate);
+<script>
+    function calculatePrice() {
+        const price = $('#price').val();
+        const userType = $('#userType').val();
+        const productType = $('#productType').val();
+        const publishedDate = $('#publishedDate').val();
+        console.log('Inside calculate', price, userType, productType, publishedDate);
 
-            const product = new window.global.Product(productType, price, new Date(publishedDate));
-            const user = new window.global.User(userType);
-            const calculate = new window.global.CalculatePrice(product, user);
+        const product = new window.global.Product(productType, price, new Date(publishedDate));
+        const user = new window.global.User(userType);
+        const calculate = new window.global.CalculatePrice(product, user);
 
-            $('#calculatePrice').html(calculate.price());
-            $('#rebate').html(calculate.rebate());
+        $('#calculatePrice').html(calculate.price());
+        $('#rebate').html(calculate.rebate());
 
-        }
-    </script>
+    }
+</script>
 
-    <script>
-        $('#publishedDate').datepicker({
-            autoclose: true,
-            format: 'yyyy-mm-dd'
-        });
-    </script>
-    </body>
+<script>
+    $('#publishedDate').datepicker({
+        autoclose: true,
+        format: 'yyyy-mm-dd'
+    });
+</script>
+</body>
 </html>

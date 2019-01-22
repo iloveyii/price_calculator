@@ -1,4 +1,4 @@
-import { PRODUCT_TYPE } from "./config/settings";
+import {PRODUCT_TYPE} from "./config/settings";
 import moment from 'moment';
 
 
@@ -18,7 +18,7 @@ export default class Product {
     }
 
     publishedToday() {
-        const sameDay = moment().isSame( moment(this.publishedDate), 'day' );
+        const sameDay = moment().isSame(moment(this.publishedDate), 'day');
         console.log('Same day', sameDay, this);
         return sameDay;
     }
