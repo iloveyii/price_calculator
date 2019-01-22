@@ -13,6 +13,8 @@ export default class CalculatePrice {
     }
 
     price() {
+        console.log('Inside calculatePrice');
+        console.log( ( this.product.price) , Number(PRODUCT_TYPE_PRICES[this.product.productType]) , this.rebate() );
         return Number(this.product.price) + Number(PRODUCT_TYPE_PRICES[this.product.productType]) - this.rebate();
     }
 

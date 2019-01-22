@@ -24,6 +24,6 @@ export default class Product {
     }
 
     isNew() {
-        return this.productType === PRODUCT_TYPE.NEW;
+        return Number(this.productType) === PRODUCT_TYPE.NEW;
     }
 }
