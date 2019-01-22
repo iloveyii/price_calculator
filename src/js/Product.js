@@ -19,6 +19,7 @@ export default class Product {
 
     publishedToday() {
         const sameDay = moment().isSame( moment(this.publishedDate), 'day' );
+        console.log('Same day', sameDay, this);
         return sameDay;
     }
 

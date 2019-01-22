@@ -16,7 +16,8 @@ export default class CalculatePrice {
     }
 
     price() {
-        return this.product.price + PRODUCT_TYPE_PRICES[this.product.productType] - this.rebate();
+        console.log(Number(this.product.price) , Number(PRODUCT_TYPE_PRICES[this.product.productType]) , this.rebate());
+        return Number(this.product.price) + Number(PRODUCT_TYPE_PRICES[this.product.productType]) - this.rebate();
     }
 
     rebate() {
@@ -26,10 +27,11 @@ export default class CalculatePrice {
         }
 
         // If you user is a company user - rebate 5
-        if(this.user.userType === USER_TYPE.COMPANY_USER) {
+        if(Number(this.user.userType) === USER_TYPE.COMPANY_USER) {
             return REBATE.COMPANY_USER;
         }
 
+        console.log(this);
         return REBATE.DEFAULT;
     }
 }
