@@ -17,76 +17,68 @@
     <!-- JQuery -->
     <script src="./js/jquery.js"></script>
 
-    <!-- Vue -->
-    <script src="https://unpkg.com/vue"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vue-resource@1.5.1"></script>
 </head>
 <body style="height: 100vh">
 
-<div class="container-fluid" id="vue-app" style="height: 100vh">
+<div class="container" id="app" style="height: 100vh">
 
-    <div class="row" style="height: 100vh">
-        <div class="col-sm-6 offset-3" style="height: 100vh">
-            <div class="row">
-                <div class="col-sm-121">
-                    <form>
-                        <div class="form-group">
-                            <label for="userType">User Type</label>
-                            <select class="form-control" id="userType">
-                                <option value="1">Company User</option>
-                                <option value="2">Normal User</option>
-                            </select>
-                            <small id="userTypeHelp" class="form-text text-muted">Select user type.</small>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="productType">Product Type</label>
-                            <select class="form-control" id="productType">
-                                <option value="1">New</option>
-                                <option value="2">Old</option>
-                            </select>
-                            <small id="productTypeHelp" class="form-text text-muted">Select product type.</small>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="publishedDate">Published Date</label>
-                            <input type="text" id="publishedDate" class="form-control"/>
-                            <small id="publishedDateHelp" class="form-text text-muted">Select published date.</small>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="price">Price</label>
-                            <input type="text" id="price" class="form-control"/>
-                            <small id="priceHelp" class="form-text text-muted">Enter price.</small>
-                        </div>
-
-                        <div class="form-group">
-                            <div>
-                                <label for="price">Calculated Price:</label> <span id="calculatePrice"></span>
-                            </div>
-
-                            <div>
-                                <label for="price">Rebate:</label> <span id="rebate"></span>
-                            </div>
-                        </div>
-
-                        <button type="button" onclick="calculatePrice()" class="btn btn-primary">Run</button>
-                    </form>
+    <div class="row justify-content-md-center">
+        <div class="col-sm-12 col-md-6">
+            <hr>
+            <h2>Calculate Price</h2>
+            <hr>
+            <form>
+                <div class="form-group">
+                    <label for="userType">User Type</label>
+                    <select class="form-control" id="userType">
+                        <option value="1">Company User</option>
+                        <option value="2">Normal User</option>
+                    </select>
+                    <small id="userTypeHelp" class="form-text text-muted">Select user type.</small>
                 </div>
-            </div>
 
+                <div class="form-group">
+                    <label for="productType">Product Type</label>
+                    <select class="form-control" id="productType">
+                        <option value="1">New</option>
+                        <option value="2">Old</option>
+                    </select>
+                    <small id="productTypeHelp" class="form-text text-muted">Select product type.</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="publishedDate">Published Date</label>
+                    <input type="text" id="publishedDate" class="form-control"/>
+                    <small id="publishedDateHelp" class="form-text text-muted">Select published date.</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="price">Price</label>
+                    <input type="text" id="price" class="form-control"/>
+                    <small id="priceHelp" class="form-text text-muted">Enter price.</small>
+                </div>
+
+                <div class="form-group">
+                    <div>
+                        <label for="price">Calculated Price:</label> <span id="calculatePrice"></span>
+                    </div>
+
+                    <div>
+                        <label for="price">Rebate:</label> <span id="rebate"></span>
+                    </div>
+                </div>
+
+                <button type="button" onclick="calculatePrice()" class="btn btn-primary">Run</button>
+            </form>
         </div>
-
     </div>
+
 </div>
 
 
-<!-- jQuery CDN -->
 <!-- Bootstrap Js CDN -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<!-- HLS Video Library-->
-<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
-<!-- Vue code -->
+<!-- JS Custom code -->
 <script src="./js/bundle.js"></script>
 <script src="./js/bootstrap-datepicker.min.js"></script>
 
