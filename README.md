@@ -2,7 +2,9 @@ Calculate Price
 =======
 This a small application to calculate price developed in Node, ES6, JS. 
 
+![Screenshot](http://price-calculator.softhem.se/img/screenshot.png)
 
+[DEMO](http://price-calculator.softhem.se/)
 
 ## Background
 This application calculates price based on different rules and values. The calculation uses:
